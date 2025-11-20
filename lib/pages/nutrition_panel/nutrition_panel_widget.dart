@@ -84,7 +84,7 @@ class _NutritionPanelWidgetState extends State<NutritionPanelWidget> {
               if (selectedMedia != null &&
                   selectedMedia.every(
                       (m) => validateFileFormat(m.storagePath, context))) {
-                safeSetState(() => _model.isDataUploading_uploadData3lh = true);
+                safeSetState(() => _model.isDataUploading_uploadData7m8 = true);
                 var selectedUploadedFiles = <FFUploadedFile>[];
 
                 var downloadUrls = <String>[];
@@ -105,14 +105,14 @@ class _NutritionPanelWidgetState extends State<NutritionPanelWidget> {
                     selectedFiles: selectedMedia,
                   );
                 } finally {
-                  _model.isDataUploading_uploadData3lh = false;
+                  _model.isDataUploading_uploadData7m8 = false;
                 }
                 if (selectedUploadedFiles.length == selectedMedia.length &&
                     downloadUrls.length == selectedMedia.length) {
                   safeSetState(() {
-                    _model.uploadedLocalFile_uploadData3lh =
+                    _model.uploadedLocalFile_uploadData7m8 =
                         selectedUploadedFiles.first;
-                    _model.uploadedFileUrl_uploadData3lh = downloadUrls.first;
+                    _model.uploadedFileUrl_uploadData7m8 = downloadUrls.first;
                   });
                 } else {
                   safeSetState(() {});
@@ -120,14 +120,10 @@ class _NutritionPanelWidgetState extends State<NutritionPanelWidget> {
                 }
               }
 
-              _model.base64Convert = await actions.imagetoBase64(
+              await actions.imagetoBase64(
                 null,
               );
-              _model.apicallresult = await FoodCameraCall.call(
-                base64Image: _model.base64Convert,
-                prompt:
-                    'You are a nutritional support agent. When given an image, you will look for the food items within it, itemise them and provide the total nutritional content within them. Return JSON only in this format (no explanation, no text) schema: { \"productName\": \"string\", \"nutrients\": { \"energy\": 0, \"fat\": 0.0, \"saturated Fat\": 0.0, \"carbohydrates\": 0, \"sugars\": 0.0, \"fiber\": 0.0, \"proteins\": 0.0, \"salt\": 0.0, \"sodium\": 0.0 } } ',
-              );
+              _model.apicallresult = await FoodCameraCall.call();
 
               if ((_model.apicallresult?.succeeded ?? true)) {
                 _model.calString = FoodCameraCall.jsonText(

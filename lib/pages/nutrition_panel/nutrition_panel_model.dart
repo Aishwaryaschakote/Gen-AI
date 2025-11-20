@@ -31,13 +31,11 @@ class NutritionPanelModel extends FlutterFlowModel<NutritionPanelWidget> {
 
   ///  State fields for stateful widgets in this page.
 
-  bool isDataUploading_uploadData3lh = false;
-  FFUploadedFile uploadedLocalFile_uploadData3lh =
+  bool isDataUploading_uploadData7m8 = false;
+  FFUploadedFile uploadedLocalFile_uploadData7m8 =
       FFUploadedFile(bytes: Uint8List.fromList([]), originalFilename: '');
-  String uploadedFileUrl_uploadData3lh = '';
+  String uploadedFileUrl_uploadData7m8 = '';
 
-  // Stores action output result for [Custom Action - imagetoBase64] action in FloatingActionButton widget.
-  String? base64Convert;
   // Stores action output result for [Backend Call - API (FoodCamera)] action in FloatingActionButton widget.
   ApiCallResponse? apicallresult;
 
