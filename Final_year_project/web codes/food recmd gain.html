@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Today's Meal Plan</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+.back-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+  .container {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #0f172a;
+  }
+
+  .meal-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+  .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .sun { background: #ffedd5; color: #ea580c; }
+  .moon { background: #1f2937; color: #ffffff; }
+  .snack { background: #fed7aa; color: #c2410c; }
+
+  .content { flex: 1; }
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: #365176;
+    margin-bottom: 4px;
+  }
+
+  .food {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .desc {
+    font-size: 14px;
+    color: #2f435e;
+    margin-bottom: 6px;
+  }
+
+  .stats {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .cal {
+    color: #2563eb;
+    margin-right: 14px;
+  }
+
+  .protein {
+    color: #16a34a;
+  }
+
+  .img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Today's Meal Plan</h1>
+
+  <!-- Breakfast -->
+  <div class="meal-card">
+    <div class="icon sun">☀️</div>
+    <div class="content">
+      <div class="title">Breakfast</div>
+      <div class="subtitle">High-energy start</div>
+      <div class="food">Paneer Paratha</div>
+      <div class="desc">Whole wheat paratha stuffed with paneer</div>
+      <div class="stats">
+        <span class="cal">420 cal</span>
+        <span class="protein">18g protein</span>
+      </div>
+    </div>
+    <div class="img">🥙</div>
+  </div>
+
+  <!-- Lunch -->
+  <div class="meal-card">
+    <div class="icon sun">☀️</div>
+    <div class="content">
+      <div class="title">Lunch</div>
+      <div class="subtitle">Build muscle & strength</div>
+      <div class="food">Rice, Dal & Chicken Curry</div>
+      <div class="desc">Balanced carbs with high-quality protein</div>
+      <div class="stats">
+        <span class="cal">650 cal</span>
+        <span class="protein">32g protein</span>
+      </div>
+    </div>
+    <div class="img">🍛</div>
+  </div>
+
+  <!-- Dinner -->
+  <div class="meal-card">
+    <div class="icon moon">🌙</div>
+    <div class="content">
+      <div class="title">Dinner</div>
+      <div class="subtitle">Recovery meal</div>
+      <div class="food">Grilled Paneer & Veggies</div>
+      <div class="desc">Protein-rich dinner with healthy fats</div>
+      <div class="stats">
+        <span class="cal">520 cal</span>
+        <span class="protein">25g protein</span>
+      </div>
+    </div>
+    <div class="img">🧀</div>
+  </div>
+
+  <!-- Snack -->
+<div class="meal-card">
+  <div class="icon snack">🍪</div>
+  <div class="content">
+    <div class="title">Snack</div>
+    <div class="food">Banana Milkshake</div>
+    <div class="stats">
+      <span class="cal">300 cal</span>
+      <span class="protein">10g protein</span>
+    </div>
+  </div>
+  <div class="img">🥛</div>
+</div>
+<div class="back-container">
+  <a href="weightGain.html" class="back-link">Back</a>
+</div>
+
+</div>
+
+</body>
+</html>

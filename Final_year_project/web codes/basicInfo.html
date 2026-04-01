@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WellNest – Basic Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* ==== RESET ==== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        Roboto, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .back-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    }
+
+    /* ==== CONTAINER ==== */
+    .container {
+      max-width: 420px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #1f2937;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    /* ==== INPUTS ==== */
+    .input-group {
+      margin-bottom: 22px;
+    }
+
+    .input-label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 10px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 16px 18px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 16px;
+      background: #f9fafb;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #3b82f6;
+      background: white;
+      box-shadow: 0 0 0 4px rgba(59,130,246,0.1);
+    }
+
+    /* ==== ROW FOR HEIGHT & WEIGHT ==== */
+    .row {
+      display: flex;
+      gap: 14px;
+    }
+
+    .row .input-group {
+      flex: 1;
+    }
+
+    /* ==== BUTTON ==== */
+    .cta-button {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #4f46e5, #4338ca);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 10px 25px rgba(79,70,229,0.35);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      .content { padding: 28px 22px 34px; }
+      .title { font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="content">
+
+      <div class="title">Basic Information</div>
+
+      <!-- Full Name -->
+      <div class="input-group">
+        <label class="input-label">Full Name</label>
+        <input type="text" class="input-field" placeholder="Enter your full name">
+      </div>
+
+      <!-- Gender -->
+      <div class="input-group">
+        <label class="input-label">Gender</label>
+        <select class="input-field">
+          <option value="">Select your gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Age -->
+      <div class="input-group">
+        <label class="input-label">Age</label>
+        <input type="number" class="input-field" placeholder="Enter your age">
+      </div>
+
+      <!-- Height & Weight -->
+      <div class="row">
+        <div class="input-group">
+          <label class="input-label">Height (cm)</label>
+          <input type="number" class="input-field" placeholder="Height in cm">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Weight (kg)</label>
+          <input type="number" class="input-field" placeholder="Weight in kg">
+        </div>
+      </div>
+
+      <!-- Save & Next -->
+      <button class="cta-button" onclick="location.href='medicalInfo.html'">Save & Next </button>
+      <div class="back-container">
+    <a href="login.html" class="back-link">Back</a>
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>

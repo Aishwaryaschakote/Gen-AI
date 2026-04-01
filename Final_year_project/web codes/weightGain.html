@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Goal Plan</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* MAIN CARD */
+.container {
+  width: 90%;
+  max-width: 600px;        /* BIGGER width for laptop */
+  min-height: 520px;       /* HEIGHT adjusted */
+  background: #f8fafc;
+  padding: 32px;
+  border-radius: 26px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+/* GOAL CARD (CLICKABLE) */
+.goal-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(135deg, #9acbff, #5aa8ff);
+  padding: 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 36px;
+}
+
+.goal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(59,130,246,0.4);
+}
+
+.goal-icon {
+  width: 56px;
+  height: 56px;
+  background: #1e90ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+.goal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.goal-desc {
+  font-size: 15px;
+  color: #1e3a8a;
+}
+
+.goal-progress {
+  font-size: 14px;
+  color: #1e40af;
+  margin-top: 6px;
+}
+
+/* RECOMMENDED */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* BUTTON CARDS */
+.card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px 16px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.meal {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.workout {
+  background: #ecfeff;
+  color: #0284c7;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #64748b;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Your Weight Goal Plan</h1>
+  <div class="subtitle">
+    Personalized recommendations to help you achieve your weight management goals
+  </div>
+
+  <!-- CLICKABLE GOAL -->
+   <div class="goal-card">
+    <div class="goal-icon">⚔️</div>
+    <div>
+      <div class="goal-title">Weight Gain Goal</div>
+      <div class="goal-desc">Target: gain 2 lbs per week</div>
+      <div class="goal-progress">65% progress towards your goal</div>
+    </div>
+  </div>
+
+  <div class="section-title">Recommended for You</div>
+
+  <div class="grid">
+    <div class="card" onclick="location.href='food recmd gain.html'">
+      <div class="icon meal">🍽️</div>
+      <div class="card-title">Meal Plans</div>
+      <div class="card-desc">Customized nutrition plans</div>
+    </div>
+
+    <div class="card" onclick="location.href='burn gain.html'">
+      <div class="icon workout">🏃</div>
+      <div class="card-title">Workouts</div>
+      <div class="card-desc">Targeted exercise routines</div>
+    </div>
+  </div>
+  <div class="back-container">
+  <a href="goals.html" class="back-link">Back</a>
+</div>
+
+</div>
+
+
+</body>
+</html>
