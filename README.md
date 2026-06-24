@@ -18,6 +18,8 @@ WellNest is an AI-powered mobile application that simplifies daily nutrition tra
 - **AI:** Generative Vision APIs (OpenAI / Gemini) for food detection & portion estimation  
 - **Optional:** Firebase for push notifications (if enabled)
 
+- Through this project, I gained experience in designing user-focused applications, managing data efficiently, and understanding how technology can improve healthcare services.
+
 ## Quickstart (developer)
 1. Clone the repo:
 ```bash
